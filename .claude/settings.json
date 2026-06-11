@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk grep *)",
+      "Bash(rtk find *)",
+      "Bash(time curl -s -X POST http://localhost:3000/api/generate -F 'clothingImage=@/tmp/clothing.png;type=image/png' -F 'bodyImage=@/tmp/body.png;type=image/png' -F personHeight=1,70m -F personWeight=65kg -F personBust=92cm -F personWaist=70cm -F personHips=98cm -F aspectRatio=3:4 -F resolution=1K -o /tmp/response.json -w 'HTTP %{http_code}\\\\n')"
+    ]
+  }
+}
