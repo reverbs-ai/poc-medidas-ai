@@ -15,8 +15,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Moda POC — Gemini 3.1 Flash Image",
-  description: "Prova de conceito: geração de imagens de moda com IA",
+  title: "PROVEI Fit — Catálogo e Medidas",
+  description: "POC com catálogo de produtos, medidas e try-on com Gemini.",
 };
 
 export default function RootLayout({
@@ -26,11 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${outfit.variable} ${manrope.variable} antialiased font-body`}
-      >
-        {children}
-      </body>
+      <body className={`${outfit.variable} ${manrope.variable} antialiased font-body`}>{children}</body>
     </html>
   );
 }
