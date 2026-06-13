@@ -53,7 +53,7 @@ export default async function HomePage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-10 border-b border-slate-100 bg-white/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+        <div className="mx-auto flex max-w-[1680px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 2xl:px-8">
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-provei-gradient font-display text-base font-bold text-white sm:h-10 sm:w-10 sm:text-lg">
               P
@@ -69,7 +69,7 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <div className="mx-auto w-full max-w-[1680px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8 2xl:px-10">
         <ProductCatalogClient initialProducts={products} />
       </div>
     </main>

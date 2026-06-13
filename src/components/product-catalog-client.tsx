@@ -276,16 +276,16 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
 
   return (
     <div className="space-y-6">
-      <section className="overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-sm">
-        <div className="border-b border-slate-100 bg-white/80 px-4 py-5 backdrop-blur-sm sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
-            <div className="max-w-3xl space-y-3">
+      <section className="overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.06)] sm:rounded-[36px]">
+        <div className="border-b border-slate-100 bg-white/80 px-4 py-5 backdrop-blur-sm sm:px-6 lg:px-8 2xl:px-10">
+          <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:items-end">
+            <div className="max-w-4xl space-y-3">
               <div className="inline-flex items-center gap-2 rounded-full border border-purple-100 bg-purple-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-purple-600">
                 <span className="h-2 w-2 rounded-full bg-[#9B6CFF]" />
                 PROVEI // Catálogo de produtos
               </div>
               <div>
-                <h1 className="font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                <h1 className="font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl 2xl:text-6xl">
                   Ferramenta demo com cadastro real de produtos.
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
@@ -294,7 +294,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
               </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3 xl:min-w-[460px] xl:max-w-[520px]">
+            <div className="grid gap-3 sm:grid-cols-3 xl:max-w-[560px] xl:justify-self-end">
               <StatCard label="Produtos" value={String(products.length).padStart(2, "0")} hint="cadastros ativos" />
               <StatCard label="Tamanhos" value={String(totalSizes).padStart(2, "0")} hint="linhas no banco" />
               <StatCard label="Modo" value={hasSelection ? "Edição" : "Novo"} hint={hasSelection ? "produto aberto" : "novo cadastro"} />
@@ -302,8 +302,8 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
           </div>
         </div>
 
-        <div className="grid gap-5 bg-slate-50/70 p-4 sm:p-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:p-8">
-          <aside className="space-y-4 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm">
+        <div className="grid gap-5 bg-slate-50/70 p-4 sm:p-6 lg:grid-cols-[340px_minmax(0,1fr)] lg:p-8 2xl:grid-cols-[380px_minmax(0,1fr)] 2xl:p-10">
+          <aside className="space-y-4 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-hidden 2xl:p-5">
             <div className="space-y-3">
               <div className="flex items-center justify-between gap-3">
                 <div>
@@ -332,13 +332,13 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                 <span className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] text-slate-500">{products.length}</span>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-3 lg:max-h-[calc(100vh-22rem)] lg:overflow-y-auto lg:pr-1">
                 {products.length === 0 ? <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-4 text-sm text-slate-400">Nenhum produto cadastrado ainda.</div> : null}
                 {products.map((product) => {
                   const isActive = selectedId === product.id;
                   return (
-                    <button key={product.id} type="button" onClick={() => handleSelectProduct(product.id)} className={`group flex w-full items-center gap-3 rounded-3xl border p-3 text-left transition duration-200 ${isActive ? "border-purple-200 bg-purple-50 shadow-[0_10px_30px_rgba(155,108,255,0.10)]" : "border-slate-100 bg-white hover:border-purple-100 hover:bg-purple-50/50"}`}>
-                      <div className="h-16 w-16 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+                    <button key={product.id} type="button" onClick={() => handleSelectProduct(product.id)} className={`group flex w-full items-center gap-3 rounded-3xl border p-3 text-left transition duration-200 2xl:p-4 ${isActive ? "border-purple-200 bg-purple-50 shadow-[0_10px_30px_rgba(155,108,255,0.10)]" : "border-slate-100 bg-white hover:border-purple-100 hover:bg-purple-50/50"}`}>
+                      <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 2xl:h-20 2xl:w-20">
                         {product.imagePath ? <img src={product.imagePath} alt={product.name} className="h-full w-full object-cover" /> : <div className="flex h-full w-full items-center justify-center px-2 text-center text-[10px] uppercase tracking-[0.16em] text-slate-300">Sem imagem</div>}
                       </div>
                       <div className="min-w-0 flex-1">
@@ -358,8 +358,8 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
             </div>
           </aside>
 
-          <div className="grid gap-5 xl:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)]">
-            <form onSubmit={handleSubmit} className="space-y-6 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm sm:p-6">
+          <div className="grid gap-5 2xl:grid-cols-[minmax(720px,1fr)_460px]">
+            <form onSubmit={handleSubmit} className="space-y-6 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm sm:p-6 2xl:p-7">
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 text-sm font-medium text-slate-700 sm:col-span-2">
                   <span>Nome do produto</span>
@@ -383,7 +383,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                     </label>
                     <input id="product-image-upload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" onChange={handleImageUpload} className="sr-only" />
                     {uploading ? <p className="mt-3 text-xs text-purple-600">Enviando imagem...</p> : null}
-                    {form.imagePath ? <div className="mt-4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"><img src={form.imagePath} alt={form.name || "Produto"} className="h-52 w-full object-cover" /></div> : null}
+                    {form.imagePath ? <div className="mt-4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"><img src={form.imagePath} alt={form.name || "Produto"} className="h-44 w-full object-cover lg:h-40 2xl:h-52" /></div> : null}
                   </div>
                 </div>
 
@@ -457,7 +457,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
               </div>
             </form>
 
-            <aside className="space-y-5 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm sm:p-6">
+            <aside className="space-y-5 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm sm:p-6 2xl:sticky 2xl:top-28 2xl:max-h-[calc(100vh-8rem)] 2xl:self-start 2xl:overflow-y-auto 2xl:p-7">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-3">
                   <div><p className="text-sm font-semibold text-slate-900">Preview da ferramenta</p><p className="text-xs text-slate-500">Aparência próxima do case PROVEI.</p></div>
@@ -476,7 +476,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                   <div className="grid gap-4 p-4">
                     <div className="relative overflow-hidden rounded-3xl border border-purple-100 bg-purple-50">
                       <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_center,rgba(155,108,255,0.22),transparent_70%)]" />
-                      {form.imagePath ? <img src={form.imagePath} alt={form.name || "Produto"} className="relative h-[300px] w-full object-cover sm:h-[420px]" /> : <div className="relative flex h-[260px] items-center justify-center px-6 text-center text-sm text-slate-400 sm:h-[420px]">A imagem principal aparece aqui.</div>}
+                      {form.imagePath ? <img src={form.imagePath} alt={form.name || "Produto"} className="relative h-[280px] w-full object-cover sm:h-[360px] xl:h-[390px] 2xl:h-[440px]" /> : <div className="relative flex h-[260px] items-center justify-center px-6 text-center text-sm text-slate-400 sm:h-[360px] xl:h-[390px] 2xl:h-[440px]">A imagem principal aparece aqui.</div>}
                     </div>
 
                     <div className="space-y-3 text-sm text-slate-600">
