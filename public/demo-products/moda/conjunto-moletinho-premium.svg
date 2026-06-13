@@ -1,0 +1,34 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="80" x2="820" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F6F0FF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="200" y1="180" x2="760" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B6CFF"/>
+      <stop offset="1" stop-color="#35B7FF"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="130" width="760" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#6146B9" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" rx="72" fill="url(#bg)"/>
+  <circle cx="760" cy="170" r="120" fill="#9B6CFF" fill-opacity="0.10"/>
+  <circle cx="145" cy="1010" r="170" fill="#35B7FF" fill-opacity="0.10"/>
+  <rect x="118" y="132" width="664" height="904" rx="54" fill="white" fill-opacity="0.86" stroke="#E9DDFE" filter="url(#shadow)"/>
+  <path d="M365 205C391 180 509 180 535 205" stroke="#B7A6E9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M450 192V262" stroke="#B7A6E9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M314 282H586" stroke="#B7A6E9" stroke-width="10" stroke-linecap="round"/>
+  
+  <path d="M335 300L256 382L318 520L356 494V672H544V494L582 520L644 382L565 300L510 344H390L335 300Z" fill="#D8C7FF"/>
+  <path d="M390 344C410 372 490 372 510 344" stroke="#B69DFF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M348 706H552L590 902H486L450 760L414 902H310L348 706Z" fill="#BFA7FF"/>
+  <path d="M450 706V902" stroke="#F5F0FF" stroke-width="8"/>
+  <path d="M340 672H560" stroke="#A98BFA" stroke-width="10" stroke-linecap="round"/>
+
+  <rect x="170" y="960" width="560" height="46" rx="23" fill="#F8F5FF" stroke="#E4D7FF"/>
+  <text x="450" y="991" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#4B3B77">Conjunto Moletinho Premium</text>
+  <text x="450" y="1045" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7A7194">Conforto fashion</text>
+  <text x="450" y="1095" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="5" fill="#9B6CFF">PROVEI FIT</text>
+</svg>

@@ -339,7 +339,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                   return (
                     <button key={product.id} type="button" onClick={() => handleSelectProduct(product.id)} className={`group flex w-full items-center gap-3 rounded-3xl border p-3 text-left transition duration-200 2xl:p-4 ${isActive ? "border-purple-200 bg-purple-50 shadow-[0_10px_30px_rgba(155,108,255,0.10)]" : "border-slate-100 bg-white hover:border-purple-100 hover:bg-purple-50/50"}`}>
                       <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 2xl:h-20 2xl:w-20">
-                        {product.imagePath ? <img src={product.imagePath} alt={product.name} className="h-full w-full object-cover" /> : <div className="flex h-full w-full items-center justify-center px-2 text-center text-[10px] uppercase tracking-[0.16em] text-slate-300">Sem imagem</div>}
+                        {product.imagePath ? <img src={product.imagePath} alt={product.name} className="h-full w-full object-contain" /> : <div className="flex h-full w-full items-center justify-center px-2 text-center text-[10px] uppercase tracking-[0.16em] text-slate-300">Sem imagem</div>}
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-start justify-between gap-2">
@@ -383,7 +383,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                     </label>
                     <input id="product-image-upload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" onChange={handleImageUpload} className="sr-only" />
                     {uploading ? <p className="mt-3 text-xs text-purple-600">Enviando imagem...</p> : null}
-                    {form.imagePath ? <div className="mt-4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"><img src={form.imagePath} alt={form.name || "Produto"} className="h-44 w-full object-cover lg:h-40 2xl:h-52" /></div> : null}
+                    {form.imagePath ? <div className="mt-4 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"><img src={form.imagePath} alt={form.name || "Produto"} className="h-44 w-full object-contain lg:h-40 2xl:h-52" /></div> : null}
                   </div>
                 </div>
 
@@ -476,7 +476,7 @@ export default function ProductCatalogClient({ initialProducts }: { initialProdu
                   <div className="grid gap-4 p-4">
                     <div className="relative overflow-hidden rounded-3xl border border-purple-100 bg-purple-50">
                       <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_center,rgba(155,108,255,0.22),transparent_70%)]" />
-                      {form.imagePath ? <img src={form.imagePath} alt={form.name || "Produto"} className="relative h-[280px] w-full object-cover sm:h-[360px] xl:h-[390px] 2xl:h-[440px]" /> : <div className="relative flex h-[260px] items-center justify-center px-6 text-center text-sm text-slate-400 sm:h-[360px] xl:h-[390px] 2xl:h-[440px]">A imagem principal aparece aqui.</div>}
+                      {form.imagePath ? <img src={form.imagePath} alt={form.name || "Produto"} className="relative h-[280px] w-full object-contain sm:h-[360px] xl:h-[390px] 2xl:h-[440px]" /> : <div className="relative flex h-[260px] items-center justify-center px-6 text-center text-sm text-slate-400 sm:h-[360px] xl:h-[390px] 2xl:h-[440px]">A imagem principal aparece aqui.</div>}
                     </div>
 
                     <div className="space-y-3 text-sm text-slate-600">

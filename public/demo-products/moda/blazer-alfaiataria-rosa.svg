@@ -1,0 +1,36 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="80" x2="820" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F6F0FF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="200" y1="180" x2="760" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B6CFF"/>
+      <stop offset="1" stop-color="#35B7FF"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="130" width="760" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#6146B9" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" rx="72" fill="url(#bg)"/>
+  <circle cx="760" cy="170" r="120" fill="#9B6CFF" fill-opacity="0.10"/>
+  <circle cx="145" cy="1010" r="170" fill="#35B7FF" fill-opacity="0.10"/>
+  <rect x="118" y="132" width="664" height="904" rx="54" fill="white" fill-opacity="0.86" stroke="#E9DDFE" filter="url(#shadow)"/>
+  <path d="M365 205C391 180 509 180 535 205" stroke="#B7A6E9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M450 192V262" stroke="#B7A6E9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M314 282H586" stroke="#B7A6E9" stroke-width="10" stroke-linecap="round"/>
+  
+  <path d="M330 306L236 430L286 870H436L450 516L464 870H614L664 430L570 306L510 350H390L330 306Z" fill="#F2A8C6"/>
+  <path d="M390 350L450 516L510 350" fill="#FFFFFF"/>
+  <path d="M330 306L390 350L350 510L286 430L330 306Z" fill="#EA8BB6"/>
+  <path d="M570 306L510 350L550 510L614 430L570 306Z" fill="#EA8BB6"/>
+  <path d="M450 516L423 870" stroke="#D46C9F" stroke-width="8" stroke-linecap="round"/>
+  <path d="M450 516L477 870" stroke="#D46C9F" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="450" cy="560" r="10" fill="#B74785"/><circle cx="450" cy="620" r="10" fill="#B74785"/>
+
+  <rect x="170" y="960" width="560" height="46" rx="23" fill="#F8F5FF" stroke="#E4D7FF"/>
+  <text x="450" y="991" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#4B3B77">Blazer Alfaiataria Rosa</text>
+  <text x="450" y="1045" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7A7194">Alfaiataria urbana</text>
+  <text x="450" y="1095" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="5" fill="#9B6CFF">PROVEI FIT</text>
+</svg>
